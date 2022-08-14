@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" referrerpolicy="no-referrer" />
+
+    <title>Paper Rock Scissors</title>
+</head>
+<body>
+    <header class="header__">
+        <nav>
+            <h1 class="title">ROCK - PAPER - SCISSOR</h1>
+        </nav>
+        <div class="rules">
+            <h3>RULES</h3>
+            <p>To play the game, you need to choose your weapon first.</p>
+            <p>Then the game will automatically begin and see who will win!</p>
+        </div>
+    </header>
+
+    <main class="main__container">
+        <div class="play">
+            <h2 class="title__weapon">Please choose your weapon below</h2>
+            <div class="weapons">
+                <button class="btn__weapon rock"><i class="fa-solid fa-hand-back-fist"></i>Rock</button>
+                <button class="btn__weapon paper"><i class="fa-solid fa-hand"></i>Paper</button>
+                <button class="btn__weapon scissors"><i class="fa-solid fa-hand-scissors"></i>Scissors</button>
+            </div>
+    
+            <div class="show__result ">
+                <div class="weapon__choosed">
+                    <div class="result__weapon">
+                        <h4 class="weapon__annouce">Your weapon is:</h4>
+                        <span id="weapon__player"></span>
+                    </div>
+
+                    <div class="result__weapon score">
+                        <div id="player__score" class="score__show">0</div>
+                        <div id="computer__score" class="score__show">0</div>
+                    </div>
+                    
+                    <div class="result__weapon">
+                        <h4 class="weapon__annouce">Computer's weapon is:</h4>
+                        <span id="weapon__computer"></span>
+                    </div>
+                </div>
+        
+                <div class="result">
+                    <span id="winner" class="winner__show"></span>
+                </div>
+
+                <div id="btn__play"></div>
+            </div>
+        </div>
+
+        <div id="battle_conclusion" class="conclusion ">
+            <h2 id="conclusion__text" class="winner__text"></h2>
+            <button id="replay" class="play__again">Play again</button>
+        </div>
+    </main>
+
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>

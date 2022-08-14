@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --color-01: rgb(125, 123, 241);
+    --color-02: rgb(251, 118, 118);
+    --color-03: rgb(149, 149, 149);
+    --color-04: #232323;
+    --color-05: #ffffff;
+    --color-06: #525252;
+    --color-gradient: linear-gradient(45deg, var(--color-01), var(--color-02));;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    background-color: var(--color-05);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .2);
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    background-image: var(--color-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Conclusion window */
+.conclusion {
+    background-color: var(--color-04);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    transition: all .5s ease-out;
+}
+
+.conclusion.active {
+    visibility: visible;
+}
+
+.winner__text{
+    color: var(--color-05);
+    font-weight: bold;
+    font-size: 64px;
+}
+
+.play__again {
+    color: var(--color-05);
+    background-image: var(--color-gradient);
+    border: none;
+    outline: none;
+    padding: 1.2em 2.5em;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+}
+
+.play__again:hover {
+    transform: scale(.9);
+}
+/* End conclusion window */
+
+/* Rules section */
+.rules {
+    padding: 2em 0;
+    text-align: center;
+}
+
+.rules h3 {
+    font-size: 24px;
+    color: var(--color-06);
+}
+
+.rules p{
+    color: var(--color-03);
+}
+/* End rules section */
+
+/* Main section */
+.main__container {
+    padding: 1em;
+}
+
+.title__weapon {
+    font-size: 48px;
+    background-image: var(--color-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    /* transition: all .3s ease-in-out; */
+    animation: fadeInOut 1s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.weapons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    padding: 2em 0;
+}
+
+.btn__weapon {
+    padding: 1em 2em;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: all .3s ease-in-out;
+}
+
+.btn__weapon:hover {
+    background-image: var(--color-gradient);
+    color: var(--color-05);
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, .4);
+}
+
+.weapon__choosed {
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    padding: 2em 0;
+    color: var(--color-06);
+    text-align: center;
+}
+
+.result__weapon {
+    display: flex;
+    flex-direction: column;
+}
+
+.result__weapon span {
+    font-weight: 700;
+    font-size: 28px;
+    background-image: var(--color-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.score {
+    flex-direction: row;
+    gap: 2em;
+    margin: 0 auto;
+}
+
+.score__show {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--color-03);
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.weapon__annouce {
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.result {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0;
+    color: var(--color-06);
+}
+
+.winner__show {
+    font-size: 64px;
+    background-image: var(--color-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+button i {
+    margin-right: 8px;
+}
+/* End main section */
